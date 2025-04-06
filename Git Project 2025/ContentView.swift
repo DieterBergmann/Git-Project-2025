@@ -18,7 +18,7 @@ struct ContentView: View {
                     .scaledToFit()
                     .foregroundStyle(.orange)
                 
-                Button("Show Modal") {
+                Button("Show my Modal View") {
                     isPresented = true
                 }
                 .sheet(isPresented: $isPresented) {
