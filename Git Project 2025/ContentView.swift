@@ -12,13 +12,20 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            Button("Show Modal") {
-                isPresented = true
+            VStack {
+                Image(systemName: "swift")
+                    .resizable()
+                    .scaledToFit()
+                    .foregroundStyle(.orange)
+                
+                Button("Show Modal") {
+                    isPresented = true
+                }
+                .sheet(isPresented: $isPresented) {
+                    Text("This is an modal screen")
+                }
+                .navigationBarTitle("Xcode and Git")
             }
-            .sheet(isPresented: $isPresented) {
-                Text("This is an modal screen")
-            }
-            .navigationBarTitle("Xcode and Git")
         }
     }
 }
